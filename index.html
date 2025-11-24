@@ -8,6 +8,7 @@
             margin: 0; 
             padding: 0; 
             background: #f5f5f5;
+            text-align: center;
         }
         nav { 
             background: #333; 
@@ -22,6 +23,7 @@
         nav a:hover { 
             text-decoration: underline; 
         }
+
         .container { 
             padding: 40px; 
             max-width: 900px; 
@@ -30,12 +32,26 @@
             border-radius: 10px; 
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
+
+        /* FLEX ROW: TEXT LEFT, IMAGE RIGHT */
+        .content-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            text-align: left;
+        }
+
+        .text-section {
+            max-width: 450px;
+        }
+
         .profile-img {
             width: 200px;
             border-radius: 10px;
-            display: block;
-            margin-bottom: 20px;
         }
+
         h1 {
             font-size: 40px;
             margin-bottom: 5px;
@@ -50,8 +66,10 @@
             font-size: 18px;
             line-height: 1.6;
         }
-        .contact {
-            margin-top: 20px;
+
+        .contact-section {
+            margin-top: 60px;
+            padding: 20px 0;
             font-size: 18px;
         }
     </style>
@@ -68,26 +86,32 @@
 
 <div class="container">
 
-    <!-- ⭐ YOUR PICTURE GOES HERE ⭐ -->
-    <!-- Change "mypic.jpg" to your actual file name -->
-    <img src="mypic.jpg" alt="My Photo" class="profile-img">
+    <div class="content-row">
 
-    <!-- ⭐ NAME + TITLE ⭐ -->
-    <h1><b>Nimansh Chourey</b></h1>
-    <h2>Aspiring Doctor</h2>
+        <!-- LEFT SIDE: TEXT -->
+        <div class="text-section">
+            <h1><b>Nimansh Chourey</b></h1>
+            <h2>Aspiring Doctor</h2>
 
-    <!-- ⭐ BRIEF INTRO ⭐ -->
-    <p>
-        I am a dedicated high school student passionate about medicine, 
-        healthcare, and helping others. I enjoy learning, exploring new topics 
-        in science, and working toward my dream of becoming a doctor.
-    </p>
+            <p>
+                I am a dedicated high school student passionate about medicine, 
+                healthcare, and helping others. I enjoy learning, exploring new topics 
+                in science, and working toward my dream of becoming a doctor.
+            </p>
+        </div>
 
-    <!-- ⭐ CONTACT ⭐ -->
-    <p class="contact"><b>Contact Information: </b> nimanshchourey@gmail.com </p>
+        <!-- RIGHT SIDE: IMAGE -->
+        <img src="mypic.jpg" alt="My Photo" class="profile-img">
+
+    </div>
+
+    <!-- CONTACT INFO AT BOTTOM -->
+    <div class="contact-section">
+        <b>Contact Information:</b><br>
+        Email: nimanshchourey@gmail.com
+    </div>
 
 </div>
 
 </body>
 </html>
-
