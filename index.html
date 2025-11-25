@@ -3,35 +3,48 @@
 <head>
     <title>Nimansh Chourey - Home</title>
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            margin: 0; 
-            padding: 0; 
-            background: #f2f2f2;
-            text-align: center;
+       body {
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    text-align: center;
+
+    background: linear-gradient(120deg, #000000, #444444, #aaaaaa);
+    background-size: 300% 300%;
+    animation: gradientMove 12s ease infinite;
+}
+
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
+        /* NAV BAR */
         nav { 
-            background: #333; 
+            background: rgba(0,0,0,0.65); 
             padding: 15px; 
+            backdrop-filter: blur(6px);
         }
         nav a { 
             color: white; 
             margin-right: 20px; 
             text-decoration: none; 
             font-size: 16px;
+            transition: 0.3s ease;
         }
         nav a:hover { 
-            text-decoration: underline; 
+            color: #00eaff;        
+            transform: scale(1.07); 
         }
 
+        /* MAIN CONTENT */
         .container { 
             padding: 40px; 
             max-width: 900px; 
             margin: 40px auto; 
-            background: white; 
-            border-radius: 12px; 
-            box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+            background: none; 
         }
 
         .content-row {
@@ -45,12 +58,20 @@
 
         .text-section {
             max-width: 450px;
+            color: white;
         }
 
+        /* IMAGE WITH HOVER ANIMATION */
         .profile-img {
-            width: 280px;         /* Bigger image */
-            border-radius: 14px;  /* Clean rounded corners */
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Smooth shadow */
+            width: 280px;
+            border-radius: 18px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+            transition: 0.35s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.07);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
         }
 
         h1 {
@@ -59,20 +80,21 @@
         }
         h2 {
             font-size: 22px;
-            color: #555;
+            color: #e0e0e0;
             margin-top: 0;
-            font-weight: normal;
         }
         p {
             font-size: 18px;
             line-height: 1.6;
+            color: #f1f1f1;
         }
 
         .contact-section {
             margin-top: 50px;
             padding-top: 20px;
-            border-top: 2px solid #ddd;
+            border-top: 2px solid rgba(255,255,255,0.3);
             font-size: 18px;
+            color: white;
         }
     </style>
 </head>
@@ -90,7 +112,7 @@
 
     <div class="content-row">
 
-        <!-- LEFT SIDE TEXT -->
+        <!-- TEXT -->
         <div class="text-section">
             <h1><b>Nimansh Chourey</b></h1>
             <h2>Junior at the Academy for Math, Engineering and Science</h2>
@@ -104,12 +126,11 @@
             </p>
         </div>
 
-        <!-- RIGHT SIDE IMAGE -->
+        <!-- IMAGE -->
         <img src="mypic.jpg" alt="My Photo" class="profile-img">
 
     </div>
 
-    <!-- CONTACT INFO -->
     <div class="contact-section">
         <b>Contact Information:</b><br>
         Email: nimanshchourey@gmail.com
@@ -119,4 +140,5 @@
 
 </body>
 </html>
+
 
