@@ -3,15 +3,15 @@
 <head>
     <title>Nimansh Chourey - Academics</title>
     <style>
-        body {
-            font-family: Arial, sans-serif; 
-            margin: 0; 
-            padding: 0; 
-            text-align: center;
-            background: linear-gradient(120deg, #000000, #444444, #aaaaaa);
-            background-size: 300% 300%;
-            animation: gradientMove 12s ease infinite;
-        }
+       body {
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background: linear-gradient(120deg, #000000, #444444, #aaaaaa);
+    background-size: 300% 300%;
+    animation: gradientMove 12s ease infinite;
+    zoom: 1.25;
+}
         @keyframes gradientMove {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
@@ -22,6 +22,7 @@
             background: rgba(0,0,0,0.65); 
             padding: 15px; 
             backdrop-filter: blur(6px);
+            text-align: center;
         }
         nav a { 
             color: white; 
@@ -39,19 +40,47 @@
             padding: 40px; 
             max-width: 900px; 
             margin: 40px auto; 
-            background: none;
-            color: white;
+            background: none; 
         }
         h1 {
             font-size: 42px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             color: white;
+            text-align: center;
         }
-        p {
+        .intro {
             font-size: 18px;
             line-height: 1.6;
             color: #f1f1f1;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .course {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 40px;
             text-align: left;
+        }
+        .course-text {
+            flex: 1;
+        }
+        .course h2 {
+            font-size: 24px;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .course p {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #f1f1f1;
+            margin: 0;
+        }
+        .course-img {
+            width: 200px;
+            border-radius: 12px;
+            flex-shrink: 0;
         }
     </style>
 </head>
@@ -65,7 +94,59 @@
 </nav>
 <div class="container">
     <h1>Academics</h1>
-    <p>Your academic achievements go here.</p>
+    <p class="intro">
+        In my academic journey, I've taken several courses that sparked my curiosity. These are a few of the classes I took which interested me.
+    </p>
+
+    <div class="course">
+        <div class="course-text">
+            <h2>Foundations of Biology 1 & Foundations of Biology Lab 1 (University of Utah)</h2>
+            <p>
+                These courses introduced me to the complexity and intricacy of the human body and biological systems. From the microscopic workings of cells to the coordination of organs, I became fascinated by how the body functions as an interconnected system. The lab component allowed me to observe these processes firsthand, deepening my curiosity and appreciation for life sciences.
+            </p>
+        </div>
+        <img src="biol.jpg" alt="Biology" class="course-img">
+    </div>
+
+    <div class="course">
+        <div class="course-text">
+            <h2>Chemistry Honors</h2>
+            <p>
+                As one of my first rigorous science classes, Chemistry Honors challenged me in new ways and marked my first real experience in a laboratory setting. I learned to approach experiments methodically, work safely with chemicals, and analyze results critically. This course helped me develop a strong foundation in scientific thinking and practical lab skills.
+            </p>
+        </div>
+        <img src="chem.jpg" alt="Chemistry" class="course-img">
+    </div>
+
+    <div class="course">
+        <div class="course-text">
+            <h2>Physics for Scientists and Engineers 1 & 2 (University of Utah)</h2>
+            <p>
+                These courses focused on classical mechanics, electricity, and magnetism, combining rigorous theoretical lessons with challenging problem-solving exercises. Laboratory sessions complemented lectures by providing hands-on experience with experiments that illustrated core physical principles and real-world applications.
+            </p>
+        </div>
+        <img src="physics.jpg" alt="Physics" class="course-img">
+    </div>
+
+    <div class="course">
+        <div class="course-text">
+            <h2>Calculus 1, 2 & 3 (University of Utah)</h2>
+            <p>
+                Through these courses, I gained a strong foundation in differential and integral calculus, sequences and series, and multivariable calculus. Working through complex problems and real-world applications strengthened both my analytical thinking and my ability to model mathematical relationships in science and engineering.
+            </p>
+        </div>
+        <img src="calc.jpg" alt="Calculus" class="course-img">
+    </div>
+
+    <div class="course">
+        <div class="course-text">
+            <h2>Art of Engineering</h2>
+            <p>
+                This course gave me a new perspective on engineering and architecture, allowing me to explore how structures are designed and built. It nurtured my appreciation for the creativity involved in engineering and provided an outlet to combine artistic expression with analytical thinking. I enjoyed designing projects that balanced function, aesthetics, and innovation.
+            </p>
+        </div>
+        <img src="art.jpg" alt="Art of Engineering" class="course-img">
+    </div>
 </div>
 </body>
 </html>
