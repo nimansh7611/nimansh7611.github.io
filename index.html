@@ -8,19 +8,16 @@
     margin: 0; 
     padding: 0; 
     text-align: center;
-
     background: linear-gradient(120deg, #000000, #444444, #aaaaaa);
     background-size: 300% 300%;
     animation: gradientMove 12s ease infinite;
+    zoom: 1.25; /* Makes everything 125% larger */
 }
-
-
         @keyframes gradientMove {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
-
         /* NAV BAR */
         nav { 
             background: rgba(0,0,0,0.65); 
@@ -38,7 +35,6 @@
             color: #00eaff;        
             transform: scale(1.07); 
         }
-
         /* MAIN CONTENT */
         .container { 
             padding: 40px; 
@@ -46,7 +42,6 @@
             margin: 40px auto; 
             background: none; 
         }
-
         .content-row {
             display: flex;
             justify-content: center;
@@ -55,18 +50,15 @@
             gap: 40px;
             text-align: left;
         }
-
         .text-section {
             max-width: 450px;
             color: white;
         }
-
         /* IMAGE WITH HOVER ANIMATION */
         .profile-img {
-            width: 200px;
-            border-radius: 18px;
+            width: 180px;
+            border-radius: 16px;
         }
-
         h1 {
             font-size: 42px;
             margin-bottom: 5px;
@@ -81,7 +73,6 @@
             line-height: 1.6;
             color: #f1f1f1;
         }
-
         .contact-section {
             margin-top: 50px;
             padding-top: 20px;
@@ -92,7 +83,6 @@
     </style>
 </head>
 <body>
-
 <nav>
     <a href="index.html">Home</a>
     <a href="internship.html">Internship</a>
@@ -100,16 +90,12 @@
     <a href="projects.html">Projects</a>
     <a href="academics.html">Academics</a>
 </nav>
-
 <div class="container">
-
     <div class="content-row">
-
         <!-- TEXT -->
         <div class="text-section">
             <h1><b>Nimansh Chourey</b></h1>
             <h2>Junior at the Academy for Math, Engineering and Science</h2>
-
             <p>
                 I am a dedicated high school student passionate about medicine, 
                 healthcare, and helping others. I enjoy learning, exploring new topics 
@@ -118,19 +104,14 @@
                 Thank you for visiting my portfolio! Feel free to contact me with the information below:
             </p>
         </div>
-
         <!-- IMAGE -->
         <img src="mypic.jpg" alt="My Photo" class="profile-img">
-
     </div>
-
     <div class="contact-section">
         <b>Contact Information:</b><br>
         Email: nimanshchourey@gmail.com
     </div>
-
 </div>
-
 </body>
 </html>
 
