@@ -65,11 +65,6 @@
             flex-direction: row-reverse;
         }
 
-        .section img {
-            width: 45%;
-            border-radius: 10px;
-        }
-
         .section p {
             font-size: 18px;
             line-height: 1.6;
@@ -79,19 +74,30 @@
         .image-row {
             display: flex;
             gap: 20px;
-            width: 100%;
-            justify-content: space-between;
+            width: 45%;
         }
 
         .image-row img {
             width: 48%;
+            border-radius: 10px;
+        }
+
+        .image-single {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .image-single img {
+            width: 50%;
+            border-radius: 10px;
         }
 
         @media screen and (max-width: 800px) {
-            .section, .image-row {
+            .section, .image-row, .image-single {
                 flex-direction: column;
             }
-            .section p, .section img, .image-row img {
+            .section p, .section img, .image-row img, .image-single img {
                 width: 100%;
             }
         }
@@ -111,12 +117,15 @@
 <div class="container">
     <h1>Crossroads Utah AHEC Internship</h1>
 
-    <!-- Para 1 -->
+    <!-- Para 1: Crossroads Utah AHEC -->
     <div class="section">
         <p>
             I interned at Crossroads Utah AHEC. It is a program that introduces high school students to healthcare careers by visiting hospitals, job shadowing, and hands-on skill labs. I observed different medical departments and participated in educational activities with healthcare professionals to explore career paths in medicine and public health.
         </p>
-        <img src="intern1.jpg" alt="Crossroads Utah AHEC Internship">
+        <div class="image-row">
+            <img src="intern1.jpg" alt="Crossroads Utah AHEC Internship 1">
+            <img src="intern1b.jpg" alt="Crossroads Utah AHEC Internship 2">
+        </div>
     </div>
 
     <!-- Para 2: Endotracheal Intubation -->
@@ -155,8 +164,8 @@
                 It provided a practical connection between classroom knowledge of biology and real-life medical anatomy.
             </p>
         </div>
-        <div class="image-row">
-            <img src="intern4a.jpg" alt="Pig Heart Dissection 1">
+        <div class="image-single">
+            <img src="intern4a.jpg" alt="Pig Heart Dissection">
         </div>
     </div>
 
@@ -164,5 +173,4 @@
 
 </body>
 </html>
-
 
