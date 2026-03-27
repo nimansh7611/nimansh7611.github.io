@@ -70,7 +70,7 @@
             margin: 0;
         }
 
-        /* ── Two-image grid (normal) ── */
+        /* ── Two-image grid ── */
         .image-pair {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -79,27 +79,28 @@
 
         .image-pair img {
             width: 100%;
-            height: auto;
-            border-radius: 12px;
-            display: block;
+            border-radius: 10px;
         }
 
-        /* ── Two-image grid (larger — for para 2) ── */
-        .section.large-media {
-            grid-template-columns: 2fr 3fr;
+        /* ── Single centred image ── */
+        .image-single img {
+            width: 100%;
+            border-radius: 10px;
         }
 
-        /* ── Single image ── */
-        .image-single img,
+        /* ── Solo image ── */
+        .image-solo {
+            display: flex;
+            justify-content: center;
+        }
+
         .image-solo img {
             width: 100%;
-            height: auto;
-            border-radius: 12px;
-            display: block;
+            border-radius: 10px;
         }
 
         @media screen and (max-width: 750px) {
-            .section, .section.reverse, .section.large-media {
+            .section, .section.reverse {
                 grid-template-columns: 1fr;
             }
             .section.reverse .text-block,
@@ -137,8 +138,8 @@
         </div>
     </div>
 
-    <!-- Para 2: Endotracheal Intubation — larger image column -->
-    <div class="section reverse large-media">
+    <!-- Para 2: Endotracheal Intubation -->
+    <div class="section reverse">
         <div class="text-block">
             <h2>Technical Skillset I Learned: Endotracheal Intubation</h2>
             <p>
