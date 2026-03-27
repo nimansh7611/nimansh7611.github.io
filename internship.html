@@ -70,18 +70,20 @@
             margin: 0;
         }
 
-        /* ── Two-image stack ── */
+        /* ── Two-image side by side ── */
         .image-pair {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 14px;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
         }
 
         .image-pair img {
             width: 100%;
-            height: auto;
+            max-height: 200px;
+            object-fit: contain;
             border-radius: 12px;
             display: block;
+            background: rgba(0,0,0,0.2);
         }
 
         .image-single img {
@@ -188,4 +190,3 @@
 
 </body>
 </html>
-
