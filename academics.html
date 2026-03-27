@@ -1,104 +1,173 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Nimansh Chourey - Academics</title>
+    <title>Nimansh Chourey - Projects</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
             background: linear-gradient(120deg, #000000, #444444, #aaaaaa);
             background-size: 300% 300%;
             animation: gradientMove 12s ease infinite;
             color: white;
         }
-
+ 
         @keyframes gradientMove {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
-
-        nav {
-            background: rgba(0,0,0,0.65);
-            padding: 15px;
+ 
+        nav { 
+            background: rgba(0,0,0,0.65); 
+            padding: 15px; 
             text-align: center;
             backdrop-filter: blur(6px);
         }
-
-        nav a {
-            color: white;
-            margin-right: 20px;
-            text-decoration: none;
+ 
+        nav a { 
+            color: white; 
+            margin-right: 20px; 
+            text-decoration: none; 
             font-size: 16px;
             transition: 0.3s ease;
         }
-
-        nav a:hover {
-            color: #00eaff;
+ 
+        nav a:hover { 
+            color: #00eaff;        
         }
-
-        .container {
-            padding: 40px;
-            max-width: 1000px;
-            margin: 40px auto;
+ 
+        .container { 
+            padding: 40px; 
+            max-width: 1000px; 
+            margin: 40px auto; 
         }
-
+ 
         h1 {
             font-size: 42px;
-            margin-bottom: 10px;
-        }
-
-        .intro {
-            font-size: 17px;
-            line-height: 1.75;
-            color: #e0e0e0;
             margin-bottom: 50px;
         }
-
-        /* ── Course row — same grid as internship sections ── */
+ 
+        /* ── Section grid — same as internship/academics ── */
         .section {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            align-items: center;
+            align-items: start;
             gap: 40px;
             margin-bottom: 60px;
         }
-
+ 
         .section.reverse .text-block { order: 2; }
         .section.reverse .media-block { order: 1; }
-
+ 
         .text-block h2 {
-            font-size: 24px;
-            margin: 0 0 12px 0;
+            font-size: 26px;
+            margin: 0 0 14px 0;
         }
-
+ 
         .text-block p {
             font-size: 17px;
             line-height: 1.75;
-            margin: 0;
             color: #f1f1f1;
+            margin: 0 0 14px 0;
         }
-
+ 
+        .text-block p:last-of-type {
+            margin-bottom: 20px;
+        }
+ 
+        /* ── Images ── */
         .media-block img {
             width: 100%;
-            aspect-ratio: 4 / 3;
-            object-fit: cover;
+            height: auto;
             border-radius: 12px;
             display: block;
+            margin-bottom: 14px;
         }
-
+ 
+        .media-block img:last-child {
+            margin-bottom: 0;
+        }
+ 
+        /* ── Video ── */
+        .media-block iframe.video {
+            width: 100%;
+            height: 260px;
+            border-radius: 12px;
+            border: none;
+            display: block;
+        }
+ 
+        /* ── Lab report docs — full width below text ── */
+        .docs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+ 
+        .docs-grid iframe {
+            width: 100%;
+            height: 480px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+ 
+        /* ── Links ── */
+        .links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 6px;
+        }
+ 
+        .links a {
+            padding: 9px 18px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.3);
+            font-size: 15px;
+            transition: 0.3s ease;
+        }
+ 
+        .links a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+ 
+        /* Lab reports section is full width */
+        .section-full {
+            margin-bottom: 60px;
+        }
+ 
+        .section-full h2 {
+            font-size: 26px;
+            margin: 0 0 14px 0;
+        }
+ 
+        .section-full p {
+            font-size: 17px;
+            line-height: 1.75;
+            color: #f1f1f1;
+            margin: 0 0 14px 0;
+        }
+ 
         @media screen and (max-width: 750px) {
             .section, .section.reverse {
                 grid-template-columns: 1fr;
             }
             .section.reverse .text-block,
             .section.reverse .media-block { order: unset; }
+            .docs-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
+ 
 <body>
-
+ 
 <nav>
     <a href="index.html">Home</a>
     <a href="internship.html">Internship</a>
@@ -106,93 +175,80 @@
     <a href="projects.html">Projects</a>
     <a href="academics.html">Academics</a>
 </nav>
-
+ 
 <div class="container">
-    <h1>Academics</h1>
-    <p class="intro">
-        In my academic journey, I've taken several courses that sparked my curiosity. These are a few of the classes I took which interested me.
-    </p>
-
-    <!-- Calculus -->
+    <h1>Projects</h1>
+ 
+    <!-- BLACK-SCHOLES -->
     <div class="section">
         <div class="text-block">
-            <h2>Calculus 1, 2 & 3 (University of Utah)</h2>
+            <h2>Black-Scholes Options Pricer</h2>
             <p>
-                Through these courses, I gained a strong understanding in differential and integral calculus, sequences and series, and multivariable calculus. Working through complex problems and real-world applications strengthened both my analytical thinking and my ability to model mathematical relationships in science and other areas of life.
+                This project is a functional implementation of the Black-Scholes model, a widely used formula for pricing European call and put options. Users input stock price, strike price, volatility, time to maturity, and the risk-free interest rate to compute theoretical option prices.
             </p>
+            <p>
+                I built this project due to my interest in finance and quantitative modeling. It allowed me to apply calculus and probability concepts while strengthening my skills in HTML, CSS, JavaScript, and Python (via Pyodide).
+            </p>
+            <div class="links">
+                <a href="https://nimansh7611.github.io/black-scholes-optionspricer/" target="_blank">View Website</a>
+            </div>
         </div>
         <div class="media-block">
-            <img src="calc.jpg" alt="Calculus">
+            <img src="black-scholes-ui-1.png" alt="Black-Scholes Options Pricer Interface">
+            <img src="black-scholes-ui-2.png" alt="Black-Scholes Pricing Output">
         </div>
     </div>
-
-    <!-- Foundation of Biology -->
+ 
+    <!-- CHEMISTRY VIDEO -->
     <div class="section reverse">
         <div class="text-block">
-            <h2>Foundations of Biology (University of Utah)</h2>
+            <h2>Chemistry Video Project</h2>
             <p>
-                This course introduced me to the foundations of biochemistry and how life works on the molecular and cellular levels. Learning about this made me really excited for more advanced biology courses.
+                For my Chemistry Honors final exam, I created an educational video explaining the gas laws using AI-generated presidential deepfakes, synthetic voices, and custom animations.
             </p>
+            <p>
+                Inspired by 3Blue1Brown, I used Python's Manim library to design all animations independently.
+            </p>
+            <div class="links">
+                <a href="https://youtu.be/CTmf_GmXzqE" target="_blank">Watch on YouTube</a>
+                <a href="https://github.com/nimansh761/gaslaws" target="_blank">GitHub — Animations</a>
+            </div>
         </div>
         <div class="media-block">
-            <img src="bio.jpg" alt="Biology">
+            <iframe class="video" src="https://www.youtube.com/embed/CTmf_GmXzqE" allowfullscreen></iframe>
         </div>
     </div>
-
-    <!-- Physics -->
+ 
+    <!-- LAB REPORTS — full width -->
+    <div class="section-full">
+        <h2>Chemistry Lab Reports</h2>
+        <p>These lab reports were written as part of Chemistry Honors coursework.</p>
+        <div class="docs-grid">
+            <iframe src="https://docs.google.com/document/d/17GRoo3FZBYKF3zDnBnR7N268W04P59xq4PJQcgFOLiI/preview"></iframe>
+            <iframe src="https://docs.google.com/document/d/14gsN2_wycH6YXiFbWKwGEFiPo41NZaTd1GF4gJW8kpA/preview"></iframe>
+            <iframe src="https://docs.google.com/document/d/1IPhj22IJ-ZxeOw8gH05YX-CvkF5O2nwazJHz0cbEr_E/preview"></iframe>
+            <iframe src="https://docs.google.com/document/d/1-pfnHvS-DFJbQBcYnozwnCx5pZ0FMK2quKeOGBkbqLA/preview"></iframe>
+        </div>
+    </div>
+ 
+    <!-- AP CSP -->
     <div class="section">
         <div class="text-block">
-            <h2>Physics for Scientists and Engineers 1 & 2 (University of Utah)</h2>
+            <h2>AP Computer Science Principles Project</h2>
             <p>
-                These courses focused on classical mechanics, electricity, and magnetism, combining theoretical lessons with hard problem-solving exercises.
+                This project combined basic calculus and coding.
             </p>
+            <div class="links">
+                <a href="https://github.com/nimansh7611/AP-computer-science-principles-project/tree/main" target="_blank">GitHub Repository</a>
+            </div>
         </div>
         <div class="media-block">
-            <img src="physics.jpg" alt="Physics">
+            <img src="code1.jpg" alt="AP CSP Calculus Coding Project">
         </div>
     </div>
-
-    <!-- Chemistry Honors -->
-    <div class="section reverse">
-        <div class="text-block">
-            <h2>Chemistry Honors (High School)</h2>
-            <p>
-                As one of my first rigorous science classes, Chemistry Honors challenged me and marked my first real experience in a laboratory setting. I learned to approach experiments methodically, work safely with chemicals, and analyze results critically.
-            </p>
-        </div>
-        <div class="media-block">
-            <img src="chem.jpg" alt="Chemistry Honors">
-        </div>
-    </div>
-
-    <!-- General Chemistry 1 -->
-    <div class="section">
-        <div class="text-block">
-            <h2>General Chemistry 1 (University of Utah)</h2>
-            <p>
-                After learning chemistry in high school, this course deepened my understanding on all the different chemistry topics such as atomic structure, periodic trends, bonding, stoichiometry, thermochemistry, and more.
-            </p>
-        </div>
-        <div class="media-block">
-            <img src="genchem.jpg" alt="General Chemistry">
-        </div>
-    </div>
-
-    <!-- Art of Engineering -->
-    <div class="section reverse">
-        <div class="text-block">
-            <h2>Art of Engineering (High School)</h2>
-            <p>
-                This course gave me a new perspective on engineering and architecture, allowing me to explore how structures are designed and built. I grew an appreciation for the creativity involved in engineering and this class provided an outlet to combine artistic expression with analytical thinking. I enjoyed designing projects that balanced function, aesthetics, and innovation.
-            </p>
-        </div>
-        <div class="media-block">
-            <img src="art.jpg" alt="Art of Engineering">
-        </div>
-    </div>
-
+ 
 </div>
+ 
 </body>
-</html>
 </html>
 
