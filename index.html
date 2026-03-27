@@ -3,27 +3,29 @@
 <head>
     <title>Nimansh Chourey - Home</title>
     <style>
-       body {
-    font-family: Arial, sans-serif; 
-    margin: 0; 
-    padding: 0; 
-    text-align: center;
-    background: linear-gradient(120deg, #000000, #444444, #aaaaaa);
-    background-size: 300% 300%;
-    animation: gradientMove 12s ease infinite;
-    zoom: 1.25; /* Makes everything 125% larger */
-}
+        body {
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: linear-gradient(120deg, #000000, #444444, #aaaaaa);
+            background-size: 300% 300%;
+            animation: gradientMove 12s ease infinite;
+            color: white;
+        }
+
         @keyframes gradientMove {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
-        /* NAV BAR */
+
         nav { 
             background: rgba(0,0,0,0.65); 
             padding: 15px; 
+            text-align: center;
             backdrop-filter: blur(6px);
         }
+
         nav a { 
             color: white; 
             margin-right: 20px; 
@@ -31,59 +33,87 @@
             font-size: 16px;
             transition: 0.3s ease;
         }
+
         nav a:hover { 
             color: #00eaff;        
-            transform: scale(1.07); 
         }
-        /* MAIN CONTENT */
+
         .container { 
             padding: 40px; 
-            max-width: 900px; 
+            max-width: 1000px; 
             margin: 40px auto; 
-            background: none; 
         }
-        .content-row {
-            display: flex;
-            justify-content: center;
+
+        /* Hero section — mirrors the internship grid layout */
+        .section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 40px;
-            text-align: left;
+            gap: 60px;
+            margin-bottom: 60px;
         }
-        .text-section {
-            max-width: 450px;
-            color: white;
-        }
-        /* IMAGE */
-        .profile-img {
-            height: 170px;
-            width: auto;
-            border-radius: 14px;
-        }
-        h1 {
+
+        .text-block h1 {
             font-size: 42px;
-            margin-bottom: 5px;
+            margin: 0 0 10px 0;
         }
-        h2 {
-            font-size: 22px;
-            color: #e0e0e0;
-            margin-top: 0;
+
+        .text-block h2 {
+            font-size: 20px;
+            color: #d0d0d0;
+            margin: 0 0 20px 0;
+            font-weight: normal;
         }
-        p {
-            font-size: 18px;
-            line-height: 1.6;
+
+        .text-block p {
+            font-size: 17px;
+            line-height: 1.75;
+            margin: 0;
             color: #f1f1f1;
         }
+
+        /* Profile image — fills the right column cleanly */
+        .media-block {
+            display: flex;
+            justify-content: center;
+        }
+
+        .media-block img {
+            width: 100%;
+            max-width: 380px;
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+            border-radius: 14px;
+            display: block;
+        }
+
+        /* Contact strip */
         .contact-section {
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 2px solid rgba(255,255,255,0.3);
-            font-size: 18px;
+            border-top: 2px solid rgba(255, 255, 255, 0.25);
+            padding-top: 30px;
+            font-size: 17px;
+            color: #e0e0e0;
+            line-height: 1.8;
+        }
+
+        .contact-section strong {
             color: white;
+            font-size: 18px;
+        }
+
+        @media screen and (max-width: 750px) {
+            .section {
+                grid-template-columns: 1fr;
+            }
+            .media-block img {
+                max-width: 100%;
+                aspect-ratio: 4 / 3;
+            }
         }
     </style>
 </head>
 <body>
+
 <nav>
     <a href="index.html">Home</a>
     <a href="internship.html">Internship</a>
@@ -91,29 +121,36 @@
     <a href="projects.html">Projects</a>
     <a href="academics.html">Academics</a>
 </nav>
+
 <div class="container">
-    <div class="content-row">
+
+    <div class="section">
         <!-- TEXT -->
-        <div class="text-section">
+        <div class="text-block">
             <h1><b>Nimansh Chourey</b></h1>
             <h2>Junior at the Academy for Math, Engineering and Science</h2>
             <p>
                 I am a dedicated high school student passionate about medicine.
                 <br><br>
-                Thank you for visiting my portfolio! Feel free to contact me with the information below:
+                Thank you for visiting my portfolio! Feel free to contact me with the information below.
             </p>
         </div>
+
         <!-- IMAGE -->
-        <img src="mypic.jpeg" alt="My Photo" class="profile-img">
+        <div class="media-block">
+            <img src="mypic.jpeg" alt="Nimansh Chourey">
+        </div>
     </div>
+
     <div class="contact-section">
-        <b>Contact Information:</b><br>
+        <strong>Contact Information</strong><br>
         Email: nimanshchourey@gmail.com
     </div>
+
 </div>
+
 </body>
 </html>
-
 
 
 
