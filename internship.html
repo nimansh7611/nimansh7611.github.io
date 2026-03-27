@@ -38,68 +38,82 @@
 
         .container { 
             padding: 40px; 
-            max-width: 900px; 
+            max-width: 1000px; 
             margin: 40px auto; 
         }
 
         h1 {
             font-size: 42px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
         h2 {
-            font-size: 28px;
-            margin-bottom: 15px;
+            font-size: 26px;
+            margin-bottom: 12px;
         }
 
+        /* ── Section layout ── */
         .section {
-            display: flex;
-            flex-direction: row;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             align-items: center;
-            justify-content: space-between;
-            margin-bottom: 40px;
-            gap: 20px;
+            gap: 40px;
+            margin-bottom: 60px;
         }
 
-        .section.reverse {
-            flex-direction: row-reverse;
+        .section.reverse .text-block { order: 2; }
+        .section.reverse .media-block { order: 1; }
+
+        .text-block p {
+            font-size: 17px;
+            line-height: 1.75;
+            margin: 0;
         }
 
-        .section p {
-            font-size: 18px;
-            line-height: 1.6;
-            width: 50%;
+        /* ── Two-image grid ── */
+        .image-pair {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
         }
 
-        .image-row {
-            display: flex;
-            gap: 20px;
-            width: 45%;
+        .image-pair img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            border-radius: 12px;
+            display: block;
         }
 
-        .image-row img {
-            width: 48%;
-            border-radius: 10px;
+        /* ── Single centred image ── */
+        .image-single img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            border-radius: 12px;
+            display: block;
         }
 
-        .image-single {
+        /* ── Three-image grid (para 3) ── */
+        .image-solo {
             display: flex;
             justify-content: center;
-            margin-top: 10px;
         }
 
-        .image-single img {
-            width: 50%;
-            border-radius: 10px;
+        .image-solo img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            border-radius: 12px;
         }
 
-        @media screen and (max-width: 800px) {
-            .section, .image-row, .image-single {
-                flex-direction: column;
+        @media screen and (max-width: 750px) {
+            .section, .section.reverse {
+                grid-template-columns: 1fr;
             }
-            .section p, .section img, .image-row img, .image-single img {
-                width: 100%;
-            }
+            .section.reverse .text-block,
+            .section.reverse .media-block { order: unset; }
+            .image-pair { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -119,44 +133,53 @@
 
     <!-- Para 1: Crossroads Utah AHEC -->
     <div class="section">
-        <p>
-            I interned at Crossroads Utah AHEC. It is a program that introduces high school students to healthcare careers by visiting hospitals, job shadowing, and hands-on skill labs. I observed different medical departments and participated in educational activities with healthcare professionals to explore career paths in medicine and public health.
-        </p>
-        <div class="image-row">
-            <img src="intern1.jpg" alt="Crossroads Utah AHEC Internship 1">
-            <img src="intern1b.jpg" alt="Crossroads Utah AHEC Internship 2">
+        <div class="text-block">
+            <p>
+                I interned at Crossroads Utah AHEC. It is a program that introduces high school students to healthcare careers by visiting hospitals, job shadowing, and hands-on skill labs. I observed different medical departments and participated in educational activities with healthcare professionals to explore career paths in medicine and public health.
+            </p>
+        </div>
+        <div class="media-block">
+            <div class="image-pair">
+                <img src="intern1.jpg" alt="Crossroads Utah AHEC Internship 1">
+                <img src="intern1b.jpg" alt="Crossroads Utah AHEC Internship 2">
+            </div>
         </div>
     </div>
 
     <!-- Para 2: Endotracheal Intubation -->
     <div class="section reverse">
-        <div>
+        <div class="text-block">
             <h2>Technical Skillset I Learned: Endotracheal Intubation</h2>
             <p>
                 During the internship, I learned the technical skill of <strong>endotracheal intubation</strong>. 
-                This procedure involves inserting a tube into a patient’s airway to assist with breathing. 
+                This procedure involves inserting a tube into a patient's airway to assist with breathing. 
                 Using a camera-guided device, the tube is carefully placed into the trachea, and a small balloon can be attached to manually push air and oxygen into the lungs. 
                 I practiced this procedure on a mannequin, gaining hands-on experience with tube placement, airway management, and delivering breaths using a manual resuscitation bag.
             </p>
         </div>
-        <div class="image-row">
-            <img src="intern2a.jpg" alt="Endotracheal Intubation Practice 1">
-            <img src="intern2b.jpg" alt="Endotracheal Intubation Practice 2">
+        <div class="media-block">
+            <div class="image-pair">
+                <img src="intern5.jpg" alt="Endotracheal Intubation Practice 1">
+                <img src="intern6.jpg" alt="Endotracheal Intubation Practice 2">
+            </div>
         </div>
     </div>
 
-    <!-- Para 3 Placeholder -->
+    <!-- Para 3 -->
     <div class="section">
-        <p>Para 3 content goes here describing another experience or skill learned.</p>
-        <div class="image-row">
-            <img src="intern3a.jpg" alt="Internship Image 3a">
-            <img src="intern3b.jpg" alt="Internship Image 3b">
+        <div class="text-block">
+            <p>Para 3 content goes here describing another experience or skill learned.</p>
+        </div>
+        <div class="media-block">
+            <div class="image-solo">
+                <img src="intern3.jpg" alt="Internship Image 3">
+            </div>
         </div>
     </div>
 
     <!-- Para 4: Pig Heart Dissection -->
     <div class="section reverse">
-        <div>
+        <div class="text-block">
             <h2>A Task I Enjoyed: Pig Heart Dissection</h2>
             <p>
                 One of the tasks I enjoyed the most during my internship was the pig heart dissection. 
@@ -164,8 +187,10 @@
                 It provided a practical connection between classroom knowledge of biology and real-life medical anatomy.
             </p>
         </div>
-        <div class="image-single">
-            <img src="intern4a.jpg" alt="Pig Heart Dissection">
+        <div class="media-block">
+            <div class="image-single">
+                <img src="intern4.jpg" alt="Pig Heart Dissection">
+            </div>
         </div>
     </div>
 
