@@ -78,11 +78,13 @@
         .image-pair img {
             width: 100%;
             border-radius: 10px;
+            filter: saturate(1.6) contrast(1.15);
         }
 
         .image-single img {
             width: 100%;
             border-radius: 10px;
+            filter: saturate(1.6) contrast(1.15);
         }
 
         .image-solo {
@@ -93,6 +95,22 @@
         .image-solo img {
             width: 100%;
             border-radius: 10px;
+            filter: saturate(1.6) contrast(1.15);
+        }
+
+        /* COLLAGE */
+        .collage {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 30px;
+        }
+
+        .collage img {
+            width: 100%;
+            border-radius: 10px;
+            filter: saturate(1.6) contrast(1.15);
+            object-fit: cover;
         }
 
         @media screen and (max-width: 750px) {
@@ -102,6 +120,7 @@
             .section.reverse .text-block,
             .section.reverse .media-block { order: unset; }
             .image-pair { grid-template-columns: 1fr; }
+            .collage { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -205,9 +224,21 @@
     <div class="section reverse">
         <div class="text-block">
             <h2>Next Steps: What I Plan to Pursue Post-Internship</h2>
-            <p></p>
+            <p>This internship gave me direction after exploring different professions and career paths. Before this experience, I was unsure about what field I truly wanted to pursue, but being exposed to the medical environment helped me better understand my interests and strengths. Because of this internship, I now feel much more confident that I definitely want to pursue a career in the medical field.</p>
         </div>
-        <div class="media-block"></div>
+        <div class="media-block">
+            <div class="image-single">
+                <img src="intern8.jpg" alt="Next Steps">
+            </div>
+        </div>
+    </div>
+
+    <!-- Collage: intern9 - intern12 -->
+    <div class="collage">
+        <img src="intern9.jpg" alt="Internship Photo 9">
+        <img src="intern10.jpg" alt="Internship Photo 10">
+        <img src="intern11.jpg" alt="Internship Photo 11">
+        <img src="intern12.jpg" alt="Internship Photo 12">
     </div>
 
 </div>
